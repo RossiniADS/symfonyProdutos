@@ -31,8 +31,10 @@ class CategoriaController extends AbstractController
     #[Route('/categoria')]
     public function index(): Response
     {
+        $categoriaList = $this->repository->findAll();
+
         return $this->render('categoria/index.html.twig', [
-            'controller_name' => 'CategoriaController',
+            'categorias' => $categoriaList,
         ]);
     }
 
