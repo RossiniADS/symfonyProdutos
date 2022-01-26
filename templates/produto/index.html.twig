@@ -107,7 +107,7 @@
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-					<input type="submit" class="btn btn-success" value="Add" onclick="adicionarProduto()">
+					<button type="button" class="btn btn-success" onclick="adicionarProduto()">Cadastrar</button>
 				</div>
 			</form>
 		</div>
@@ -246,9 +246,9 @@
 		}),
 		//headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
 		success : function(data) {
-		console.log(data)
-		alert("Produto cadastrado com sucesso")
-		location.reload();
+			console.log(data);
+			alert("Produto cadastrado com sucesso");
+			location.reload();
 		},
 		error: function(error){
 			console.log(error.responseText);
